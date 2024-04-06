@@ -121,3 +121,11 @@ exports.GetProj_site =async () =>{
   let query="select * from proj_site"
   return await promise_connection(query);
 }
+
+exports.DeleteProj_Site =async(Id) =>{
+
+let query="delete from proj_site where Id=?";
+
+return await promise_connection(query,Id);
+
+}
